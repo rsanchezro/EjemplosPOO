@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
         var imagen:ImageView=findViewById<ImageView>(R.id.imageView)
         imagen.cargarImagen("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png")
     //   mostrar_mensaje("Mensaje", Toast.LENGTH_LONG)
-println("prueba")
+println("prueba cghdhd")
     }
 }
