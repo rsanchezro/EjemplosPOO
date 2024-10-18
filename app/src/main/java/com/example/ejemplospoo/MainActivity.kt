@@ -13,10 +13,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        var imagen:ImageView=findViewById(R.id.imageView)
-       // imagen.cargarImagen("https://github.com/bumptech/glide/blob/master/benchmark/src/main/res/raw/huge_header.jpg")
-
+        var imagen:ImageView=findViewById<ImageView>(R.id.imageView)
+        imagen.cargarImagen("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png")
     //   mostrar_mensaje("Mensaje", Toast.LENGTH_LONG)
+
 
     }
 }
