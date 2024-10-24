@@ -14,18 +14,25 @@ import com.bumptech.glide.Glide
 fun Any?.esnulo():Boolean{
     return this==null
 }
-//Ejercicio1.- Es posible definir esta función con menos código?
 
-//Funcion para simplificar un Toast, podrá ser invocada desde cualquier Activity
+//Ejercicio1.- Es posible definir esta función con menos código?
+fun Any?.esnulo2():Boolean=this==null
+
+//Funcion para simplificar un Toast,
+// podrá ser invocada desde cualquier Activity
 fun Activity.mostrar_mensaje(mensaje:String,duracion:Int= Toast.LENGTH_SHORT){
     Toast.makeText(this,mensaje,duracion).show()
 }
 
 /**
- * Funcion para obtener un color a partir de un valor de recurso, podrá ser invocada desde
- * cualquier activity. Se etiqueta con la anotación @ColorRes (ver anotaciones de recursos en
- * https://developer.android.com/studio/write/annotations?hl=es-419) para impedir en tiempo de
- * compilación que se introduzca un valor que no corresponde con un valor de recurso de color
+ * Funcion para obtener un color a partir de un valor
+ * de recurso, podrá ser invocada desde
+ * cualquier activity. Se etiqueta con la anotación
+ * @ColorRes (ver anotaciones de recursos en
+ * https://developer.android.com/studio/write/annotations?hl=es-419)
+ * para impedir en tiempo de
+ * compilación que se introduzca un valor que no corresponde
+ * con un valor de recurso de color
  * @param color_res Parametro que representa un recurso de color
  * @return Un entero que representa el color en formato AARRGGBB
  *
@@ -35,11 +42,14 @@ fun Activity.mostrar_mensaje(mensaje:String,duracion:Int= Toast.LENGTH_SHORT){
 fun Activity.get_color(@ColorRes color_res:Int): Int {
     return ContextCompat.getColor(this,color_res)
 }
+
 //Ejercicio 2.- Podemos definir la función de otra forma más sencilla?
+
 /**
  * En este caso una función que permite cargar imagenes a partir de una
  * url haciendo uso de la libreria Glide,sera necesario importarla en gradle
- * Glide es una libreria muy potente para cargar recursos desde URL's
+ * Glide es una libreria muy potente para cargar recursos
+ * desde URL's
  * (https://bumptech.github.io/glide/doc/download-setup.html)
  * Configuración e instalacion de libreria y en los ficheros gradle:
  * https://bumptech.github.io/glide/doc/download-setup.html
@@ -58,19 +68,18 @@ fun ImageView.cargarImagen(url:String)
 
 }
 
+
 fun EditText.despues_cambio_texto(listener:(String)->Unit)
 {
     this.addTextChangedListener(object:TextWatcher{
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
          //En este caso no se hace nada
         }
-
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
            //En este caso no se hace nada
         }
-
         override fun afterTextChanged(s: Editable?) {
-        listener(s.toString())
+            listener(s.toString())
         }
 
 
